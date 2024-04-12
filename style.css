@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+	}
+
+.container {
+    margin: auto;
+    max-width: 600px;
+    height: 600px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+}
+
+.container > * {
+    margin: 0;
+}
