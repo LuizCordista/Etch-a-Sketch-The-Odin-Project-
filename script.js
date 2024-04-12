@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
-let color = "black";
-
+let colors = ["red", "orange", "yellow", "green", "blue"];
+let colorCount = 0;
 
 function newDiv(number) {
     numberFinal = 100/number;
@@ -23,14 +23,18 @@ function grid(number) {
 
     paints.forEach(paint => {
         paint.addEventListener('mouseover', () => {
-            paint.style.backgroundColor = color;
+            if (colorCount == 5) {
+                colorCount = 0
+            }
+            paint.style.backgroundColor = colors[colorCount];
+            colorCount++;
         })
     })
 }
 
-const button = document.querySelector('button');
+const newGrid = document.querySelector('.newgrid');
 
-button.addEventListener("click", () => {
+newGrid.addEventListener("click", () => {
     let number = prompt("Quantos quadrados por lado? (max 100)");
     if (number > 100) {
         number = prompt("Por favor escolha um número menor que 100.")
