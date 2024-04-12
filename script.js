@@ -26,8 +26,14 @@ function grid(number) {
             paint.style.backgroundColor = color;
         })
     })
-
 }
+
+const button = document.querySelector('button');
+
+button.addEventListener("click", () => {
+    let number = prompt("Quantos quadrados por lado?");
+    grid(number);
+})
 
 
 window.onload = grid(16)
