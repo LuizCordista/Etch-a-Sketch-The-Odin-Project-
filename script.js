@@ -31,7 +31,10 @@ function grid(number) {
 const button = document.querySelector('button');
 
 button.addEventListener("click", () => {
-    let number = prompt("Quantos quadrados por lado?");
+    let number = prompt("Quantos quadrados por lado? (max 100)");
+    if (number > 100) {
+        number = prompt("Por favor escolha um número menor que 100.")
+    }
     grid(number);
 })
 
