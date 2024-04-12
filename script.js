@@ -1,4 +1,6 @@
 const container = document.querySelector('.container');
+let color = "black";
+
 
 function newDiv(number) {
     numberFinal = 100/number;
@@ -7,6 +9,7 @@ function newDiv(number) {
     div.style.flexBasis = numberFinal + '%';
     div.style.border = '1px solid black';
     div.style.height = numberFinal + '%';
+    div.className = "paint";
     return div
 }
 
@@ -16,8 +19,16 @@ function grid(number) {
     for(let i = 0; i < (number * number); i++) {
         container.appendChild(newDiv(number));
     }
+    const paints = document.querySelectorAll('.paint');
+
+    paints.forEach(paint => {
+        paint.addEventListener('mouseover', () => {
+            paint.style.backgroundColor = color;
+        })
+    })
 
 }
 
 
 window.onload = grid(16)
+
