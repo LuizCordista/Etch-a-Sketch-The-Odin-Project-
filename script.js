@@ -22,25 +22,22 @@ function grid(number) {
     }
     const paints = document.querySelectorAll(".paint");
 
-    if (option == "rainbow") {
-        paints.forEach(paint => {
-            paint.addEventListener("mouseover", () => {
+    paints.forEach(paint => {
+        paint.addEventListener("mouseover", () => {
+            if (option == "rainbow") {
                 if (colorCount == 5) {
-                colorCount = 0
-                }
-            paint.style.backgroundColor = colors[colorCount];
-            colorCount++;
-            })
-        })
-    }
-    else {
-        paints.forEach(paint => {
-            paint.addEventListener("mouseover", () => {
+                    colorCount = 0
+                    }
+                paint.style.backgroundColor = colors[colorCount];
+                colorCount++;
+            }
+            else {
                 paint.style.backgroundColor = option
-            })
+            }
         })
-    }
+    })
 }
+
 
 const newGrid = document.querySelector(".newgrid");
 
