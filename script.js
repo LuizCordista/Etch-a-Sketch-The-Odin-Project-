@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 let colors = ["red", "orange", "yellow", "green", "blue"];
 let colorCount = 0;
+let option = "black"
 
 function newDiv(number) {
     numberFinal = 100/number;
@@ -59,6 +60,15 @@ clear.addEventListener("click", () => {
         paint.style.backgroundColor = "white"
     })
 })
+
+const rainbow = document.querySelector(".rainbow")
+rainbow.addEventListener("click", () => {
+    option = "rainbow"
+}
+const black = document.querySelector(".black")
+rainbow.addEventListener("click", () => {
+    option = "black"
+}
 
 
 window.onload = grid(16)
