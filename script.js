@@ -38,7 +38,7 @@ function grid(number) {
             paint.addEventListener("mouseover", () => {
                 paint.style.backgroundColor = option
             })
-        )
+        })
     }
 }
 
@@ -64,12 +64,12 @@ clear.addEventListener("click", () => {
 const rainbow = document.querySelector(".rainbow")
 rainbow.addEventListener("click", () => {
     option = "rainbow"
-}
+})
+
 const black = document.querySelector(".black")
 rainbow.addEventListener("click", () => {
     option = "black"
-}
+})
 
 
 window.onload = grid(16)
-
