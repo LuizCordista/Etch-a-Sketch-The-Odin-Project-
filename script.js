@@ -67,7 +67,7 @@ rainbow.addEventListener("click", () => {
 })
 
 const black = document.querySelector(".black")
-rainbow.addEventListener("click", () => {
+black.addEventListener("click", () => {
     option = "black"
 })
 
