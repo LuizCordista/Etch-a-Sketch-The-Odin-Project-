@@ -64,11 +64,13 @@ clear.addEventListener("click", () => {
 const rainbow = document.querySelector(".rainbow")
 rainbow.addEventListener("click", () => {
     option = "rainbow"
+    grid(32)
 })
 
 const black = document.querySelector(".black")
 black.addEventListener("click", () => {
     option = "black"
+    grid(32)
 })
 
 
