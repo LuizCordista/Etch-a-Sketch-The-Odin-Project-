@@ -21,15 +21,24 @@ function grid(number) {
     }
     const paints = document.querySelectorAll(".paint");
 
-    paints.forEach(paint => {
-        paint.addEventListener("mouseover", () => {
-            if (colorCount == 5) {
+    if option == "rainbow" {
+        paints.forEach(paint => {
+            paint.addEventListener("mouseover", () => {
+                if (colorCount == 5) {
                 colorCount = 0
-            }
+                }
             paint.style.backgroundColor = colors[colorCount];
             colorCount++;
+            })
         })
-    })
+    }
+    else {
+        paints.forEach(paint => {
+            paint.addEventListener("mouseover", () => {
+                paint.style.backgroundColor = option
+            })
+        )
+    }
 }
 
 const newGrid = document.querySelector(".newgrid");
