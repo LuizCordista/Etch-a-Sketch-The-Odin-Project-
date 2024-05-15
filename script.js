@@ -21,7 +21,7 @@ function grid(number) {
     }
     const paints = document.querySelectorAll(".paint");
 
-    if option == "rainbow" {
+    if (option == "rainbow") {
         paints.forEach(paint => {
             paint.addEventListener("mouseover", () => {
                 if (colorCount == 5) {
